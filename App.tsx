@@ -13,6 +13,8 @@ import RestaurantDetailsScreen from './src/screens/Restaurant/RestaurantDetailsS
 import {CartProvider} from './src/context/CartContext';
 import CartScreen from './src/screens/Restaurant/CartScreen';
 import CheckoutScreen from './src/screens/Restaurant/CheckoutScreen';
+import OrderSuccessScreen from './src/screens/Restaurant/OrderSuccessScreen';
+import OrderHistoryScreen from './src/screens/Restaurant/OrderHistoryScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -32,7 +34,12 @@ export default function App() {
           <Stack.Screen name="RestaurantList" component={RestaurantListScreen}/>
           <Stack.Screen name="RestaurantDetail" component={RestaurantDetailsScreen}/>
           <Stack.Screen name="Cart" component={CartScreen}/>
+          
           <Stack.Screen name="Checkout" component={CheckoutScreen}/>
+
+          <Stack.Screen name="OrderSuccess" component={OrderSuccessScreen}/>
+          <Stack.Screen name="OrderHistory" component={OrderHistoryScreen}/>
+
         </Stack.Navigator>
       </NavigationContainer>
     </CartProvider>
